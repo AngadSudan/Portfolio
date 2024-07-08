@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Angad Sudan - Personal Portfolio\r Welcome to my personal portfolio repository! This project showcases my journey as a developer, highlighting my skills, projects, and achievements. The portfolio is designed to give you a glimpse of my professional background, interests, and the projects I've worked on.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
