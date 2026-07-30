@@ -24,6 +24,6 @@ const ResourceSchema = new Schema(
   { timestamps: true },
 );
 
-const Resource = mongoose.models.Resource || model("Resources", ResourceSchema);
+const Resource = mongoose.models.Resource || model("Resource", ResourceSchema);
 
 export default Resource;
