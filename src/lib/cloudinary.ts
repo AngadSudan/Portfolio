@@ -2,11 +2,14 @@ import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
 
 cloudinary.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
+  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-export async function uploadFileToCloudinary(file: File, folder = "portfolio-admin") {
+export async function uploadFileToCloudinary(
+  file: File,
+  folder = "portfolio-admin",
+) {
   const arrayBuffer = await file.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
 
@@ -35,4 +38,3 @@ export async function uploadFileToCloudinary(file: File, folder = "portfolio-adm
 export async function uploadFilesToCloudinary(files: File[], folder?: string) {
   return Promise.all(files.map((file) => uploadFileToCloudinary(file, folder)));
 }
-
